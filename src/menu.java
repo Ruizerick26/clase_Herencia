@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class menu {
     public static void main(String[] args) {
         Persona mipersona = new Persona("Juan","Pérez",1715482678,"Conocoto","0986487","Aquario",25);
@@ -29,6 +31,18 @@ public class menu {
         System.out.println(persona4.getNombre()+" es Estudiante");
         System.out.println("Está en "+persona4.getSemestre());
         persona4.leer();
+
+        Estudiante persona5 = new Estudiante("Luis","Sandobla",178946532,"Cotocollao","0976846351","Geminis",20,89684,"melani@gmail.com","3ero","TDST");
+        ArrayList <Estudiante> integrantes = new ArrayList<Estudiante>();
+        integrantes.add(persona4);
+        integrantes.add(persona5);
+
+        System.out.println("Todos los integrantes comienza: ");
+        for(Estudiante integrante: integrantes){
+            System.out.println(integrante.getNombre()+" "+integrante.getApellido());
+            integrante.leer();
+        }
+
 
     }
 }
